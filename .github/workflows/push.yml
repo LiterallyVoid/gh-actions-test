@@ -1,0 +1,33 @@
+name: on-push
+on: [push]
+jobs:
+  build-and-test-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: sh .ci/ubuntu.sh
+      - uses: actions/upload-artifact@v2
+        with:
+          name: bin-ubuntu
+          path: |
+            build/artifact*
+  build-and-test-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: .ci/windows.bat
+      - uses: actions/upload-artifact@v2
+        with:
+          name: bin-windows
+          path: |
+            build/artifact*
+  build-and-test-macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: sh .ci/macos.sh
+      - uses: actions/upload-artifact@v2
+        with:
+          name: bin-macos
+          path: |
+            build/artifact*
