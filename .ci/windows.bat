@@ -7,4 +7,4 @@ cd build
 cmake ..
 cmake --build .
 
-./all-tests
+all-tests
