@@ -20,7 +20,7 @@ jobs:
         with:
           name: bin-windows
           path: |
-            build/artifact*
+            build/Debug/artifact*
   build-and-test-macos:
     runs-on: macos-latest
     steps:
