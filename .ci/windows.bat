@@ -11,4 +11,4 @@ Debug\all-tests
 
 echo %PATH%
 
-msbuild .ci/windows.project
+msbuild .ci\windows.project
