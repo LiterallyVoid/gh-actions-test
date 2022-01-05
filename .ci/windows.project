@@ -1,5 +1,5 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <Target Name="AAAaaaaa">
-        <Exec Command=".ci/windows-msvc.bat"/>
+        <Exec Command=".ci\\windows-msvc.bat"/>
     </Target>
 </Project>
